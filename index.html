@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="background-color: #e3dfdf;" onload="loadCategories()">
+    <!-- header start -->
+    <header class="max-w-7xl mx-auto">
+        <div class="bg-transparent navbar bg-base-100 text-xl font-semibold border-b border-black">
+            <div class="flex-1">
+                <a class="normal-case text-xl text-indigo-500"><button class="p-3 rounded-lg  bg-indigo-500 text-white">News</button> Portal</a>
+            </div>
+            <div class="flex gap-7">
+                <p>News</p>
+                <p>blog</p>
+            </div>
+        </div>
+        <section class="category-section flex justify-between mt-8 mx-auto" id="category-section">
+        </section>
+    </header>
+    <!-- header end -->
+    <main class="max-w-7xl mx-auto">
+        <section class="mt-5">
+            <div class="alert bg-white">
+               
+                <p><span id="news-count"></span> items found for category <span id="category-name"></span></p>
+              </div>
+        </section>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
