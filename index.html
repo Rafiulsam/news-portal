@@ -9,11 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.1/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/10abfdce39.js" crossorigin="anonymous"></script>
 </head>
 
 <body style="background-color: #e3dfdf;" onload="loadCategories()">
-    <!-- header start -->
-    <header class="max-w-7xl mx-auto">
+    <!-- header section -->
+    <header class="max-w-5xl mx-auto">
         <div class="bg-transparent navbar bg-base-100 text-xl font-semibold border-b border-black">
             <div class="flex-1">
                 <a class="normal-case text-xl text-indigo-500"><button class="p-3 rounded-lg  bg-indigo-500 text-white">News</button> Portal</a>
@@ -23,18 +25,42 @@
                 <p>blog</p>
             </div>
         </div>
+        <!-- category section -->
         <section class="category-section flex justify-between mt-8 mx-auto" id="category-section">
         </section>
     </header>
-    <!-- header end -->
-    <main class="max-w-7xl mx-auto">
+    
+    <!-- main section -->
+    <main class="max-w-5xl mx-auto">
+        <!-- alert section -->
         <section class="mt-5">
             <div class="alert bg-white">
                
                 <p><span id="news-count"></span> items found for category <span id="category-name"></span></p>
               </div>
         </section>
+        <!-- sorting section -->
+        <section class="flex justify-between mt-5">
+            <div  class="flex justify-center items-center gap-3">
+                <p class="text-lg font-semibold">Sort by:</p> 
+                <div>
+                    <select class="select select-bordered w-full max-w-xs">
+                        <option disabled selected>Default</option>
+                        <option>Han Solo</option>
+                        <option>Greedo</option>
+                      </select>
+                </div>
+            </div>
+            <div>
+                <button class="rounded-md p-3 bg-indigo-500 text-white mr-3">Today's Pick</button><button class="rounded-md p-3 bg-transparent border border-indigo-500">Trending</button>
+            </div>
+        </section>
+        <!-- Display All News section -->
+        <section class="max-w-5xl mx-auto mt-10" id="all-news-container">
+           
+        </section>
     </main>
+    <!-- custom js file -->
     <script src="scripts/app.js"></script>
 </body>
 
